@@ -9,20 +9,20 @@ t.pendown()
 def draw(cw,ch,steplength):
     t.screensize(canvwidth=cw, canvheight=ch)
     t.penup()
-    t.goto(-300, 0)
+    t.goto(-cw/2, 0)
     t.pendown()
-    t.goto(300, 0)
+    t.goto(cw/2, 0)
     t.penup()
-    t.goto(0, -300)
+    t.goto(0, -cw/2)
     t.pendown()
-    t.goto(0, 300)
+    t.goto(0, cw/2)
     t.penup()
-    for x1 in range(-250,300,steplength):
+    for x1 in range(-ch/2,cw/2,steplength):
         t.goto(x1, -5)
         t.pendown()
         t.goto(x1, 5)
         t.penup()
-    for y1 in range(-250,300,steplength):
+    for y1 in range(-ch/2,cw/2,steplength):
         t.goto(-5, y1)
         t.pendown()
         t.goto(5,y1)
@@ -32,11 +32,11 @@ def draw(cw,ch,steplength):
     t.write("X", font=("Arial", 12, "normal"))
     t.goto(20, 300)
     t.write("Y", font=("Arial", 12, "normal"))
-
     for i in range(len(sample)):
         x,y=sample['x'][i], sample['y'][i]
         t.penup()
         t.goto(x,y)
         t.pendown()
         t.dot(5,'red')
-t.done()
+a,b,c=int(input()),int(input()),int(input())
+draw(a,b,c)
