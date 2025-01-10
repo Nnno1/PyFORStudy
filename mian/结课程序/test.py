@@ -19,6 +19,3 @@ elif a==3:
     print(RandomNumber)
 else:
     print('False')
-def aaa():
-     
-    return
