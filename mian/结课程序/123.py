@@ -21,12 +21,12 @@ t.pendown()
 t.goto(0,1000)
 t.penup()
 #利用循环进行划分刻度（步长）
-for x1 in range(-500,1000,50):
+for x1 in range(-1000,1000,50):
     t.goto(x1,-5)
     t.pendown()
     t.goto(x1,5)
     t.penup()
-for y1 in range(-1000,500,50):
+for y1 in range(-1000,1000,50):
     t.goto(-5,y1)
     t.pendown()
     t.goto(5,y1)
@@ -43,3 +43,4 @@ for i in range(len(sample)):
     t.goto(x,y)
     t.pendown()
     t.dot(5,'red')
+t.done()
