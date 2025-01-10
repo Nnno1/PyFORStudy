@@ -11,3 +11,4 @@ for a in range(30):
     tur.fd(100)
     tur.left(50)
     tur.pd()
+tur.done()
