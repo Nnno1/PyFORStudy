@@ -2,7 +2,7 @@
 import pandas as pd
 import turtle as t
 #读取数据并且调整绘制速度与隐藏海龟
-sample=pd.read_csv('./mian/1.csv')
+sample=pd.read_csv('./mian/结课程序/1.csv')
 t.speed(0)
 t.hideturtle()
 #设置初始的数据原点画布大小
