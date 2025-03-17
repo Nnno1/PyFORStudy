@@ -1,0 +1,5 @@
+zb1,zb2=input(),input()
+x1,y1=float(zb1[0:1]),float(zb1[2:3])
+x2,y2=float(zb2[0:1]),float(zb2[2:3])
+distance=pow((x1-x2)**2+(y1-y2)**2,0.5)
+print(f'两点间的距离为{distance:.2f}')
