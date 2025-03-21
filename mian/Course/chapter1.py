@@ -7,16 +7,6 @@ distance=pow((x1-x2)**2+(y1-y2)**2,0.5)
 print(f'两点间的距离为{distance:.2f}')
 '''
 
-plaintext = input("请输入明文：")
-
-# 加密过程，每个字符ASCII码转换为数字，加3后取模，再转回字符
-ciphertext = ''.join([chr(((ord(c) - ord('0') + 3) % 10) + ord('0')) for c in plaintext])
-print(f"密文：{ciphertext}")
-
-# 解密过程，每个字符减3后取模，恢复原文
-decrypted = ''.join([chr(((ord(c) - ord('0') - 3) % 10) + ord('0')) for c in ciphertext])
-print(f"原文：{decrypted}")
-
 
 
 def encrypt(plaintext):
