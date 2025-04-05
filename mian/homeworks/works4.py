@@ -89,3 +89,5 @@ elif score/n==1:
     print('优秀！！！')
 else:
     print('及格啦！向满分前进')
+print('按任意键退出')
+input()
