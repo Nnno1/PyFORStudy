@@ -1,4 +1,3 @@
-from math import e
 from random import randint
 from random import choice
 def grade(result,answer):       #函数用于判断正确，返回bool值，打印反馈
