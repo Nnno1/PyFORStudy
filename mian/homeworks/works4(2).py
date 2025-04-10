@@ -34,7 +34,7 @@ input()
 '''
 from random import randint
 
-def detect(result):
+def detect():
     while True:             #函数用于检测输入
         try:
             result=int(input())
@@ -47,4 +47,3 @@ max=100
 a,b=randint(0,max),randint(0,max)
 answer=a+b
 print(f'{a}+{b}=?')
-result=detect(input())

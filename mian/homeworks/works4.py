@@ -7,6 +7,14 @@ def grade(result,answer):       #函数用于判断正确，返回bool值，打�
     else:
         print('Wrong!\n')
         return False
+def detect():
+    while True:             #函数用于检测输入
+        try:
+            result=int(input())
+            return result
+            break
+        except ValueError:
+            print('请输入整数')
 score=0
 while True:
     try:
@@ -27,12 +35,7 @@ for i in range(n):
         a,b=randint(0,max),randint(0,max)
         answer=a+b
         print(f'{a}+{b}=?')
-        while True:     #检测输入
-            try:
-                result=int(input())
-                break
-            except ValueError:
-                print('请输入整数')
+        result=detect()
         if grade(result,answer):#记录得分
             score+=1
 #减法模块    
@@ -42,12 +45,7 @@ for i in range(n):
             a,b=b,a
         answer=a-b
         print(f'{a}-{b}=?')
-        while True:     #检测输入
-            try:
-                result=int(input())
-                break
-            except ValueError:
-                print('请输入整数')
+        result=detect()
         if grade(result,answer):#记录得分
             score+=1
     elif chi==3:
@@ -55,12 +53,7 @@ for i in range(n):
         a,b=randint(0,max),randint(0,max)
         answer=a*b
         print(f'{a}*{b}=?')
-        while True:     #检测输入
-            try:
-                result=int(input())
-                break
-            except ValueError:
-                print('请输入整数')
+        result=detect()
         if grade(result,answer):#记录得分
             score+=1
     elif chi==4:
@@ -74,12 +67,7 @@ for i in range(n):
                 a,b=b,a
         answer=a/b
         print(f'{a}/{b}=?')
-        while True:     #检测输入
-            try:
-                result=int(input())
-                break
-            except ValueError:
-                print('请输入整数')
+        result=detect()
         if grade(result,answer):#记录得分
             score+=1
 print(f'得分为{score}！正确率为{(score/n)*100:.2f}%')
