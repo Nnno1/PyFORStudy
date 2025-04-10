@@ -79,5 +79,4 @@ for i in range(n):#练习主要部分
     if x or y:
         score+=1
 feedback(score)
-print('按任意键退出')
-input()
+input('按任意键退出')
