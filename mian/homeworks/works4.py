@@ -53,7 +53,7 @@ def substraction(mode,max):#减除函数
         return True
     else:
         return False
-def feedback(score):#评分系统函数
+def feedback(score):#评分评价函数
     print(f'得分为{score}！正确率为{(score/n)*100:.2f}%')
     if score/n<0.6:
         print('正确率还差点，继续加油')
