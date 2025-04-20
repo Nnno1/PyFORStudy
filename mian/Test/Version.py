@@ -1,8 +1,6 @@
 import sys
 print(sys.version)
 
-
-
 a=input()
 if a.isalpha():
     print("letter")
