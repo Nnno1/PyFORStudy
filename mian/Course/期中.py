@@ -47,7 +47,7 @@ def main():
     t.speed(0)
     t.hideturtle()
     result('今天是',today,-100,200)
-    result('纪念日',str(Y)+f'{M:02d}'+f'{D:02d}',-100,100)
+    result('纪念日',f'{Y}{M:02d}{D:02d}',-100,100)
     goto(-300,-125)
     t.write('距离纪念日已经有',font=('楷体',22,'bold'))
     draw(str(days),-50,-125)
