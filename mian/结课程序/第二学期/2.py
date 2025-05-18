@@ -1,1 +1,4 @@
-#预想写一个什么程序呢？
+from secrets import randbelow
+from secrets import choice
+A=randbelow(9)
+print(A)
