@@ -1,4 +1,16 @@
 # 默认忽略的文件
 /shelf/
 /workspace.xml
-/.vscode
+
+# 忽略日志和临时文件
+*.log
+*.tmp
+temp/
+
+# 忽略依赖目录
+node_modules/
+vendor/
+
+# 忽略 IDE 配置
+.vscode/
+.idea/
