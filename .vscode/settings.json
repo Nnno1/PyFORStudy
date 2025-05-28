@@ -3,7 +3,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./mian",
+        ".",
         "-p",
         "*test.py"
     ],
