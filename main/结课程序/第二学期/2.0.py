@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # 添加3D绘图支持
 
 def roll_dice(dice_type):
     face = np.random.randint(1,7)
@@ -53,7 +54,7 @@ def predict_crystal(J, G):
 
 def visualize_parameter_space():
     # 生成参数网格
-    σ_range = np.linspace(1.05, 1.30, 20)
+    σ_range = np.linspace(1.05, 1.30,20)
     T_range = np.linspace(40, 90, 20)
 
     # 计算响应面
@@ -80,24 +81,41 @@ def visualize_parameter_space():
     plt.show()
 
 def main():
-    print("结晶过程概率模拟系统")
-    print("1. 单次模拟")
-    print("2. 参数空间可视化")
-    choice = input("请选择操作 (1/2): ")
-
-    if choice == "1":
-        # 单次模拟
-        σ = roll_dice("σ")
-        T = roll_dice("T")
-        C = roll_dice("C")
-        R = roll_dice("R")
+    try:
+        print("结晶过程概率模拟系统")
+        print("1. 单次模拟") 
+        print("2. 参数空间可视化")
+        print("程序已启动，等待用户输入...")
         
-        print(f"\n骰子结果: σ={σ:.2f}, T={T}°C, C={C} ppm, R={R} rpm")
-        J, G = calculate_crystallization(σ, T, C, R)
-        res = predict_crystal(J, G)
-        print("\n结晶预测结果:")
-        for k, v in res.items():
-            print(f"{k}: {v}")
+        while True:
+            choice = input("请选择操作 (1/2): ").strip()
+            print(f"用户选择了: {choice}")
+            
+            if choice in ("1", "2"):
+                break
+            print("输入无效，请重新输入1或2")
+        
+        if choice == "1":
+            # 单次模拟
+            σ = roll_dice("σ")
+            T = roll_dice("T")
+            C = roll_dice("C")
+            R = roll_dice("R")
+            
+            print(f"\n骰子结果: σ={σ:.2f}, T={T}°C, C={C} ppm, R={R} rpm")
+            J, G = calculate_crystallization(σ, T, C, R)
+            res = predict_crystal(J, G)
+            print("\n结晶预测结果:")
+            for k, v in res.items():
+                print(f"{k}: {v}")
 
-    elif choice == "2":
-        visualize_parameter_space()
+        elif choice == "2":
+            visualize_parameter_space()
+            
+    except Exception as e:
+        print(f"程序运行出错: {str(e)}")
+        import traceback
+        traceback.print_exc()
+
+if __name__ == "__main__":
+    main()
