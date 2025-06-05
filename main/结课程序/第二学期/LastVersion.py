@@ -15,7 +15,7 @@ def roll_point(mode):
     elif mode=='C':
         return (A-1)*100         #杂质浓度[0,500]ppm
     elif mode=='R':
-        return 100 + (A-1)*100   #搅拌速率[100,600]rpm
+        return 100+(A-1)*100   #搅拌速率[100,600]rpm
     else:
         return False
     
