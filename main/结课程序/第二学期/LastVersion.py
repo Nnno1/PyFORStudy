@@ -94,10 +94,10 @@ def visial():
     fig.colorbar(surf,ax=ax,shrink=0.5,aspect=5,label='晶体尺寸 (μm)')
     ax.contourf(Sigma,T,Size,zdir='z',offset=Size.min()-10,cmap='coolwarm',alpha=0.3)
     # 坐标轴标签
-    ax.set_xlabel('过饱和度')#,fontsize=12
-    ax.set_ylabel('温度T')#,fontsize=12
-    ax.set_zlabel('晶体尺寸')#,fontsize=12
-    ax.set_title('晶体尺寸参数响应面 (C, R随机)')#,fontsize=14
+    ax.set_xlabel('过饱和度')
+    ax.set_ylabel('温度T')
+    ax.set_zlabel('晶体尺寸')
+    ax.set_title('晶体尺寸参数响应面 (C, R随机)')
     plt.tight_layout()
     plt.show()
 
