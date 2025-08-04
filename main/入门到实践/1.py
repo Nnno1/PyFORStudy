@@ -1,4 +1,3 @@
-l=([1,2,3],4,5)
-print(id(l))
-for i in range(5):
-    print(i)
+fruit=['apple','apple',"banana",'apple','str','wateern','apple']
+while 'apple' in fruit:
+    fruit.remove('apple')
